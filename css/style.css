@@ -1,0 +1,395 @@
+* {
+	margin: 0;
+	padding:0;
+	box-sizing:border-box;
+}
+@font-face {
+  font-family: 'droid-sans';
+  src: url('../fonts/droid-sans.eot');
+  src: url('../fonts/droid-sans.eot#iefix') format('embedded-opentype'),
+       url('../fonts/droid-sans.woff2') format('woff2'),
+       url('../fonts/droid-sans.woff') format('woff'),
+       url('../fonts/droid-sans.ttf') format('truetype'),
+       url('../fonts/droid-sans.svg#droid-sans') format('svg');
+  font-weight: normal;
+}
+@font-face {
+  font-family: 'droid-sans';
+  src: url('../fonts/droid-sans-bold.eot');
+  src: url('../fonts/droid-sans-bold.eot#iefix') format('embedded-opentype'),
+       url('../fonts/droid-sans-bold.woff2') format('woff2'),
+       url('../fonts/droid-sans-bold.woff') format('woff'),
+       url('../fonts/droid-sans-bold.ttf') format('truetype'),
+       url('../fonts/droid-sans-bold.svg#droid-sans') format('svg');
+  font-weight: bold;
+}
+@font-face {
+  font-family: 'oswald';
+  src: url('../fonts/oswald-light.eot');
+  src: url('../fonts/oswald-light.eot#iefix') format('embedded-opentype'),
+       url('../fonts/oswald-light.woff2') format('woff2'),
+       url('../fonts/oswald-light.woff') format('woff'),
+       url('../fonts/oswald-light.ttf') format('truetype'),
+       url('../fonts/oswald-light.svg#oswald') format('svg');
+  font-weight: 200;
+}
+@font-face {
+  font-family: 'oswald';
+  src: url('../fonts/oswald-medium.eot');
+  src: url('../fonts/oswald-medium.eot#iefix') format('embedded-opentype'),
+       url('../fonts/oswald-medium.woff2') format('woff2'),
+       url('../fonts/oswald-medium.woff') format('woff'),
+       url('../fonts/oswald-medium.ttf') format('truetype'),
+       url('../fonts/oswald-medium.svg#oswald') format('svg');
+  font-weight: 600;
+}
+a {
+	text-decoration: none;
+	color: inherit;
+	cursor: pointer;
+}
+button {
+	cursor:pointer;
+	outline:0;
+}
+ul {
+	list-style:none;
+}
+img {
+	vertical-align: middle;
+	max-width: 100%;
+}
+body {
+	overflow-x: hidden;
+	min-width: 340px;
+	background: #fff;
+	font-size: 16px;
+	color: #343434;
+	font-family: 'droid-sans';
+}
+p {
+	line-height: 27px;
+}
+p:not(:last-child) {
+	margin-bottom: 25px;
+}
+.container {
+	max-width: 1210px;
+	margin:0 auto;
+	padding:0 20px;
+}
+.row:after {
+	content:'';
+	display: block;
+	clear:both;
+}
+.left {
+	float: left;
+}
+.right {
+	float: right;
+}
+.text-center {
+	text-align: center;
+}
+header {
+	background: url('../img/banner2.jpg') no-repeat center top;
+	background-size: cover;
+	min-height: 880px;
+	padding:50px 30px;
+	position: relative;
+}
+header h1 {
+	font-size: 28px;
+	color:#000;
+	font-weight: normal;
+	margin-top: 10px;
+}
+header a {
+	position: absolute;
+	bottom:80px;
+	left:65px;
+	z-index: 3;
+}
+header a:hover img{
+	opacity: 0.8;
+}
+.title {
+	font-size:52px;
+	color:#ff0055;
+	font-weight: 200;
+	text-align: center;
+	font-family: 'oswald';
+}
+.display-flex {
+  display:-webkit-box;
+  display:-ms-flexbox;
+  display: -webkit-flex;
+  display:flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap:wrap;
+  flex-wrap:wrap;
+}
+.align-center {
+	align-items: center;
+}
+/*=====================*/
+.our-mission {
+	background: #efefef;
+	padding:30px 0;
+	position: relative;
+}
+.skew-top {
+	position: absolute;
+  width: 100%;
+  left: 0;
+  right: 0;
+	bottom: 100%;
+}
+.skew {
+	width: 100%;
+}
+.our-mission .container {
+	width: 90%;
+}
+.our-mission .left {
+	width: 45%;
+	padding:15px 30px;
+}
+.our-mission .right {
+	width: 55%;
+	padding:15px 30px;
+	border-left: 1px solid #d3d3d3;
+}
+.our-mission .title:before {
+	content:url('../img/heart.png');
+	display: inline-block;
+   vertical-align: middle;
+}
+/*=====================*/
+.how-it-works {
+	padding:30px 0;
+	background: #e1e1e1;
+	overflow-x: hidden;
+}
+.how-it-works .title {
+	margin-bottom: 50px;
+}
+.hiw-block {
+	margin-bottom: 30px;
+}
+.hiw-block:nth-child(odd) .phone-box {
+	order:2;
+}
+.hiw-block:nth-child(odd) .text-box {
+	text-align: right;
+}
+.hiw-block .phone-box {
+	width: 700px;
+	text-align: center;
+	position: relative;
+}
+.hiw-block .text-box {
+	width: calc(100% - 700px);
+	padding: 20px 20px 110px;
+	position: relative;
+}
+.phone-box .phone-bg {
+  background: #efefef;
+  width: 75%;
+  height: 75%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  border-radius: 12%;
+   -webkit-transform: rotate(-10deg);
+   		-moz-transform: rotate(-10deg);
+        -ms-transform: rotate(-10deg);
+            transform: rotate(-10deg);
+}
+.phone-bg .icon {
+	width: 115px;
+	height: 115px;
+	border-radius: 50%;
+	background: #ff0055;
+	line-height: 115px;
+	vertical-align: middle;
+	position: absolute;
+	right: -60px;
+	top: calc(50% - 60px);
+}
+.hiw-block:nth-child(odd) .phone-bg .icon {
+	left: -60px;
+}
+.phone-box > img {
+	position: relative;
+	z-index: 1;
+	max-width: 420px;
+}
+.text-box h3 {
+	font-size: 26px;
+	margin-bottom: 5px;
+}
+.text-box img {
+	position: absolute;
+	left:0;
+	right:0;
+	margin:0 auto;
+}
+/*=====================*/
+.why-booked {
+	background: #ff0055;
+	position: relative;
+}
+.why-booked .title {
+	color: #fff;
+	padding:30px 0 70px;
+}
+.why-booked-item {
+	width: 25%;
+	padding:7px 12px;
+	text-align: center;
+	color: #fff;
+	max-width: 300px;
+	margin: 0 auto 40px;
+}
+.why-booked-item .img {
+	position: relative;
+	padding-bottom: 100%;
+	overflow: hidden;
+	border-radius: 40px;
+	-webkit-transform: rotate(-5deg);
+	-moz-transform: rotate(-5deg);
+	-o-transform: rotate(-5deg);
+  -ms-transform: rotate(-5deg);
+   transform: rotate(-5deg);
+}
+.why-booked-item .img img {
+	min-width: 100%;
+	max-width: none;
+	min-height: 100%;
+	width: auto;
+	height: auto;
+	transform: translate(-50%, -50%);
+	-webkit-transform: translate(-50%, -50%);
+	-o-transform: translate(-50%, -50%);
+	-moz-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	position: absolute;
+	top: 50%;
+	left: 50%;
+}
+.why-booked-item .img:hover {
+	-webkit-filter: brightness(140%);
+          filter: brightness(140%);
+   transform: rotate(0);
+   transition-duration:0.4s;
+}
+.why-booked-item .img:hover img {
+	transform: translate(-50%, -50%) scale(1.2);
+	-webkit-transform: translate(-50%, -50%) scale(1.2);
+	-o-transform: translate(-50%, -50%) scale(1.2);
+	-moz-transform: translate(-50%, -50%) scale(1.2);
+	-ms-transform: translate(-50%, -50%) scale(1.2);
+	transition-duration:0.4s;
+}
+.why-booked-item h3 {
+	position: absolute;
+	font-size: 25px;
+	text-transform: uppercase;
+	bottom: 50px;
+  left: 0;
+  right: 0;
+  font-family: 'oswald';
+  font-weight:600;
+}
+.why-booked-item p {
+	padding:20px 20px 0;
+	line-height: 22px;
+}
+/*=======================*/
+footer {
+	text-align: center;
+	padding:35px 0 40px;
+	font-size: 18px;
+}
+.copyright {
+	font-size: 12px;
+	color:#c8c8c8;
+	margin-top: 25px;
+}
+/*=======================*/
+/*=======================*/
+@media all and (min-width: 1350px) {
+	header {
+		background: url('../img/banner.jpg') no-repeat center top;
+		background-size: cover;
+	}
+}
+
+@media all and (max-width: 1140px) {
+	.phone-box > img {
+		max-width: 300px;
+	}
+	.hiw-block .phone-box {
+		max-width: 560px;
+		width: 100%;
+		margin:0 auto;
+	}
+	.hiw-block .text-box {
+		width: calc(100% - 570px);
+	}
+	.text-box img {
+		height: 200px;
+	}
+	.our-mission .title:before {
+		display: block;
+	}
+	.why-booked-item h3 {
+		font-size: 21px;
+	}
+}
+
+@media all and (max-width: 870px) {
+	header {
+		min-height: 600px;
+		padding: 50px 10px;
+	}
+	.hiw-block .text-box {
+		width: 100%;
+		margin:0 auto;
+		max-width: 400px;
+		padding:20px;
+		text-align: center !important;
+	}
+	.text-box img {
+		position: static;
+	}
+	.hiw-block:nth-child(odd) .phone-box {
+		order:0;
+	}
+	.our-mission .right,
+	.our-mission .left {
+		width: 100%;
+		float:none;
+		border-left:0;
+	}
+	.our-mission .container {
+		width: 100%;
+	}
+	.why-booked-item {
+		width: 50%;
+	}
+}
+
+@media all and (max-width: 500px) {
+	.why-booked-item {
+		width: 100%;
+	}
+	.title {
+		font-size: 40px;
+	}
+}
